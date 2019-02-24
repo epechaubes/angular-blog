@@ -1,0 +1,8 @@
+<div class="posts-list">
+  <ul class="posts-list">
+    <app-post-list-item *ngFor="let post of postsArray"
+                        [title]="post.title"
+                        [date]="post.date"
+                        [content]="post.content"></app-post-list-item>
+  </ul>
+</div>

@@ -1,0 +1,20 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIts > 0,
+                'list-group-item-danger': 0 > loveIts}">
+    <div class="post-item">
+        <div class="entête">
+            <p class="post-item-title">{{ title | uppercase}}</p>
+            <p class="post-item-date">{{ date | date : 'short' }}</p>
+        </div>
+        <p class="post-item-content">{{ content }}</p>
+        <div class="social-view">
+            <button class="btn btn-success" (click)="onAddView(0)">J'aime !</button>
+            <button class="btn btn-danger" (click)="onAddView(1)">Je n'aime pas !</button>
+            
+                <button [ngClass]="{'btn btn-outline':true,
+                                  'btn btn btn-outline-success': loveIts > 0,
+                                  'btn btn-outline-danger': 0 > loveIts}">{{ loveIts }}</button>           
+        </div>
+        
+    </div>
+</li>
